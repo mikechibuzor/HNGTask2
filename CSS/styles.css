@@ -429,7 +429,7 @@ nav ul li a.active:hover::after {
   }
 }
 
-@media screen and (max-height: 640px) {
+@media screen and (height: 640px) {
   .about-me {
     margin-bottom: 25rem;
     /* background: red; */
