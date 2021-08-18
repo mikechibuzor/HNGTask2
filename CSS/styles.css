@@ -1,0 +1,416 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Quicksand", sans-serif;
+}
+
+header {
+  height: 7vh;
+  background: #eeeeee;
+}
+
+nav {
+  position: sticky;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0 5rem;
+  height: 7vh;
+  background: #eeeeee;
+  display: flex;
+  align-items: center;
+  padding-top: 1rem;
+  justify-content: space-between;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+nav input[type="checkbox"] {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  width: 2rem;
+  height: 2rem;
+  opacity: 0;
+  z-index: 25;
+  cursor: pointer;
+  display: none;
+}
+nav .hamburger {
+  z-index: 20;
+  width: 2rem;
+  height: 2rem;
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  display: none;
+}
+
+.zuri {
+  position: absolute;
+  left: 5rem;
+  top: 0rem;
+  width: 4rem;
+  height: 4rem;
+
+  /* display: none; */
+}
+
+.zuri img {
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+}
+
+nav .logo p {
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+  font-weight: 800;
+  font-size: 2rem;
+}
+
+nav .logo p span {
+  color: #379392;
+  font-style: italic;
+  font-weight: bold;
+}
+
+nav ul {
+  list-style: none;
+}
+
+nav ul li {
+  display: flex;
+}
+
+nav ul li a {
+  position: relative;
+  text-decoration: none;
+  color: #7c3238;
+  font-weight: 400;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+  margin-right: 1.5rem;
+  padding-bottom: 0.1rem;
+  transition: all 0.3s ease-in-out;
+}
+
+nav ul li a::after {
+  position: absolute;
+  content: "";
+  height: 0.15rem;
+  width: 0;
+  left: 30%;
+  right: 30%;
+  border-radius: 50%;
+  bottom: 0;
+  background: #000103;
+  transition: all 0.3s ease-in-out;
+}
+
+nav ul li a:hover::after {
+  left: 0;
+  right: 0;
+  width: 100%;
+}
+
+nav ul li a.active::after {
+  width: 30%;
+}
+nav ul li a.active:hover::after {
+  width: 100%;
+}
+
+.home {
+  background: #eeeeee;
+  position: relative;
+  height: 86vh;
+}
+
+.home .welcome-text {
+  width: 43%;
+  margin: 0rem auto;
+  padding-top: 23vh;
+}
+
+.home .welcome-text h1 {
+  font-size: 3.5rem;
+  margin-top: 0.5rem;
+}
+
+.home .welcome-text p {
+  margin-top: 0.5rem;
+  line-height: 1.8rem;
+}
+
+.home .scroll-down {
+  position: absolute;
+  transition: all 0.2s linear;
+  bottom: 2rem;
+  left: 50%;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.2rem;
+}
+
+.home .scroll-down:hover {
+  transform: translateY(0.5rem);
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.2);
+  background: #fff;
+}
+
+.home .scroll-down a svg {
+  height: 2.5rem;
+  width: 2.5rem;
+  font-weight: bolder;
+}
+
+.home .scroll-down a svg path {
+  stroke: #000103;
+}
+
+.about-me {
+  padding: 5rem;
+}
+
+.about-me .head h2 {
+  font-size: 2.2rem;
+  color: #7c3238;
+}
+.about-me .head h5 {
+  letter-spacing: 0.1rem;
+  font-weight: normal;
+}
+
+.about-me .content {
+  height: 75vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.about-me .content .photo {
+  grid-column: 1/2;
+  height: 40vh;
+  width: 20vw;
+  transform: rotate(10deg);
+  box-shadow: 10px 10px #7c3238, 3px 0px #7c3238;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: auto 0;
+  z-index: -1;
+}
+
+.about-me .content .photo .image {
+  object-fit: cover;
+  transform: rotate(-10deg);
+}
+.about-me .content .photo .image img {
+  height: 100%;
+  width: 100%;
+}
+
+/* .about-me .content .text {
+} */
+
+.about-me .content .text h4 {
+  font-size: 1.5rem;
+  margin: 0.8rem 0;
+  color: #379392;
+}
+.about-me .content .text .profile ul {
+  list-style: none;
+}
+
+.about-me .content .text ul li {
+  margin-bottom: 0.7rem;
+}
+
+.about-me .content .text .profile ul li strong {
+  margin-right: 1.5rem;
+}
+
+.about-me .content .text .skills .sk ul {
+  list-style-type: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.about-me .content .text .skills .sk .tech ul li {
+  margin-bottom: 0.4rem;
+}
+.about-me .content .text .skills .sk h5 {
+  margin-bottom: 0.5rem;
+}
+
+.contact-me {
+  padding: 2rem 5rem;
+  background: #3e363f;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.contact-me h4 {
+  grid-column: 1/3;
+  font-size: 2rem;
+  color: #eeeeee;
+  margin-bottom: 1rem;
+}
+.contact-me .form {
+  position: relative;
+  grid-column: 1/2;
+}
+
+.contact-me form {
+  width: 90%;
+}
+.contact-me form .input-group {
+  display: flex;
+  flex-direction: column;
+}
+.contact-me form .input-group label {
+  margin: 1rem 0;
+  color: #eeeeee;
+}
+.contact-me form .input-group input,
+.contact-me form .input-group textarea {
+  outline: none;
+  border: none;
+  background: #eeeeee;
+  padding: 0.65rem 1rem;
+  border-radius: 0.2rem;
+}
+
+.contact-me form .input-group textarea {
+  margin-top: 2rem;
+  display: block;
+  height: 30vh;
+}
+
+.contact-me form button {
+  padding: 0.6rem 1.5rem;
+  margin-top: 1.2rem;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  border-radius: 0.25rem;
+  transition: all 0.25s linear;
+}
+
+.contact-me form button:hover {
+  background-color: #379392;
+  color: #eeeeee;
+}
+.contact-me .second-half {
+  grid-column: 2/3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.contact-me .second-half .social-media {
+  margin-bottom: 1rem;
+}
+.contact-me .second-half .social-media a {
+  margin-right: 1.5rem;
+}
+
+.contact-me .second-half .social-media svg {
+  height: 1.8rem;
+  width: 1.8rem;
+  fill: #000103;
+}
+.contact-me .second-half .mail a {
+  color: #eeeeee;
+}
+
+/* Responsivenss */
+
+@media screen and (max-width: 768px) {
+  header {
+    height: 0;
+  }
+  nav {
+    padding: 0 1rem;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+    box-shadow: none;
+    position: relative;
+  }
+  nav .logo {
+    position: absolute;
+    left: 1rem;
+    top: 1rem;
+  }
+  nav .logo p {
+    font-size: 1.3rem;
+  }
+  nav ul {
+    margin-top: 2.5rem;
+    /* display: none; */
+    visibility: hidden;
+  }
+
+  nav ul li {
+    flex-direction: column;
+  }
+  nav ul li a {
+    margin-bottom: 1rem;
+  }
+  nav ul li a:first-of-type::after {
+    width: 10%;
+  }
+  nav input[type="checkbox"],
+  nav .hamburger {
+    display: block;
+  }
+
+  nav input[type="checkbox"]:checked ~ ul {
+    visibility: visible;
+  }
+
+  .home .welcome-text {
+    padding: 20vh 1.3rem;
+    width: 100%;
+  }
+
+  .home .welcome-text h1 {
+    font-size: 2.5rem;
+  }
+
+  /* about me */
+  .about-me {
+    padding: 1rem;
+    height: 140vh;
+  }
+  .about-me .content {
+    align-items: center;
+    justify-content: center;
+  }
+  .about-me .content .photo {
+    grid-column: 1/3;
+    height: 250px;
+    width: 250px;
+    margin: 2rem auto;
+  }
+
+  .contact-me {
+    padding: 1rem 1.1rem;
+  }
+
+  .contact-me .form {
+    grid-column: 1/3;
+  }
+
+  .contact-me .second-half {
+    grid-column: 1/3;
+    margin-top: 2rem;
+  }
+}
