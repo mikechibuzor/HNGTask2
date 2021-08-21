@@ -181,7 +181,6 @@ nav ul li a.active:hover::after {
 
 .about-me {
   padding: 5rem;
-  height: auto;
 }
 
 .about-me .head h2 {
@@ -194,7 +193,8 @@ nav ul li a.active:hover::after {
 }
 
 .about-me .content {
-  height: 75vh;
+  /* height: 75vh; */
+
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
@@ -213,7 +213,8 @@ nav ul li a.active:hover::after {
 
 .about-me .content .photo .image {
   object-fit: cover;
-  transform: rotate(-10deg);
+  transform: rotate(-20deg) translateY(-0.15rem) translateX(0.899rem);
+  /* transform: translateX(0.2rem); */
 }
 .about-me .content .photo .image img {
   height: 100%;
