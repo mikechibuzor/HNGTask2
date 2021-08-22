@@ -258,7 +258,9 @@ nav ul li a.active:hover::after {
 .about-me .content .text .skills .sk h5 {
   margin-bottom: 0.5rem;
 }
-
+.about-me .soft {
+  margin-top: 1rem;
+}
 .contact-me {
   padding: 2rem 5rem;
   background: #3e363f;
