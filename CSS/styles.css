@@ -398,8 +398,6 @@ nav ul li a.active:hover::after {
   /* about me */
   .about-me {
     padding: 1rem;
-    /* height: 140vh; */
-    /* margin-bottom: 2vh; */
   }
   .about-me .content {
     align-items: center;
